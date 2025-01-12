@@ -34,11 +34,33 @@ section .data  ; <variable name> <type> <value>
 section .text
     global _start
 
-_start:
-    mov al, byte [bVar1]
-    ; add al, [bVar2]
-    ; mov [bResult], al   
 
+;   perfrom the following basic operation using <mov>:
+;   --------------------------------------------------
+;   dValue  =   27
+;   bAns    =   bNum
+;   wAns    =   wNum
+;   dAns    =   dNum
+;   qAns    =   qNum
+_start:
+    ;   dValue  =   27
+    mov dword   [dValue], 27
+
+    ;   bAns    =   bNum
+    mov al, byte [bNum]     ;   move data to register
+    mov byte [bNum], al     ;   move data to destination
+
+    ;   wAns    =   wNum
+    mov ax, word [wNum]     ;   move data to register
+    mov word [wAns], ax     ;   move data to destination
+
+    ;   dAns    =   dNum
+    mov eax, dword [dNum]   ;   move data to register
+    mov dword [dAns], eax   ;   move data to destination
+
+    ;   qAns    =   qNum
+    mov rax, qword [qNum]   ;   move data to register
+    mov qword [qAns], rax   ;   move data to destination
 last:
     mov rax, SYS_EXIT
     mov rdi, EXIT_SUCCESS
