@@ -15,6 +15,14 @@ section .data
     bNum2   db  73
     bAns    db  0
 
+    ;   ------------------
+    ;   Define word (16 bits)
+    wNum1   dw  4321
+    wNum2   dw  1234
+    wAns    dw  0
+
+    
+
 section .text
     global _start 
 
