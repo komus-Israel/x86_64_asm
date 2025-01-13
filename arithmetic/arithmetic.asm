@@ -44,15 +44,28 @@ section .text
 ;   dAns = dNum1 + dNum2
 ;   qAns = qNum1 + qNum2
 _start:
-    ; mov al, byte [bVal1]
-    ; add al, byte [bVal2]
-    ; mov byte [bAns], al 
 
-    ; mov al, 1
-    ; mov rdi, 1
-    ; mov rsi, bVal1
-    ; mov rdx, 255
-    ; syscall
+    ;   bAns = bNum1 + bNum2
+    mov al, byte [bNum1]
+    add al, byte [bNum2]
+    mov byte [bAns], al
+
+    ;   wAns = wNum1 + wNum2
+    mov ax, word [wNum1]
+    add ax, word [wNum2]
+    mov word [wAns], ax
+
+    ;   dAns = dNum1 + dNum2
+    mov eax, dword [dNum1]
+    add eax, dword [dNum2]
+    mov dword[dAns], eax
+
+    ;   qAns = qNum1 + qNum2
+    mov rax, qword [qNum1]
+    add rax, qword [qNum2]
+    mov qword[qAns], rax
+
+ 
 
 last:
     mov rax, SYS_EXIT
