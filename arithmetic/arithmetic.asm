@@ -3,9 +3,17 @@
 ;   Komolehin Israel
 
 section .data
-    bVal1   db 50
-    bVal2   db 60
-    bAns    db 0
+
+    ;   ------------------
+    ;   Define constants
+    EXIT_SUCCESS equ 0  ;   successful operation
+    SYS_EXIT equ 60     ;   call code to terminate
+
+    ;   ------------------
+    ;   Define byte (8 bits)
+    bNum1   db  42
+    bNum2   db  73
+    bAns    db  0
 
 section .text
     global _start 
