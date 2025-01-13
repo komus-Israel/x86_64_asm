@@ -65,6 +65,32 @@ _start:
     add rax, qword [qNum2]
     mov qword[qAns], rax
 
+
+;   perfrom the following basic operations:
+;   ---------------------------------------
+;   rax = rax + 1
+;   bAns = bAns + 1
+;   wAns = wAns + 1
+;   dAns = dAns + 1
+;   qAns = qAns + 1
+;   ---------------------------------------
+
+    ;   rax = rax + 1
+    inc rax
+
+    ;   bAns = bAns + 1
+    inc byte [bAns]
+
+    ;   wAns = wAns + 1
+    inc word [wAns]
+
+    ;   dAns = dAns + 1
+    inc dword [dAns]
+
+    ;   qAns = qAns + 1
+    inc qword [qAns]
+
+
  
 
 last:
