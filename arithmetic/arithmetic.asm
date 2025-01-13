@@ -21,7 +21,12 @@ section .data
     wNum2   dw  1234
     wAns    dw  0
 
-    
+    ;   ------------------
+    ;   Define double word (32 bits)
+    dNum1   dd  42000
+    dNum2   dd  73000
+    dAns    dd  0
+
 
 section .text
     global _start 
