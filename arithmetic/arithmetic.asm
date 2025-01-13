@@ -27,10 +27,22 @@ section .data
     dNum2   dd  73000
     dAns    dd  0
 
+    ;   ------------------
+    ;   Define quad word (64 bits)
+    qNum1   dq  42000000
+    qNum2   dq  73000000
+    qAns    dq  0
 
 section .text
     global _start 
 
+
+;   perfrom the following basic operations:
+;   ---------------------------------------
+;   bAns = bNum1 + bNum2
+;   wAns = wNum1 + wNum2
+;   dAns = dNum1 + dNum2
+;   qAns = qNum1 + qNum2
 _start:
     ; mov al, byte [bVal1]
     ; add al, byte [bVal2]
@@ -43,6 +55,6 @@ _start:
     ; syscall
 
 last:
-    ; mov rax, 60
-    ; mov rdi, 0
-    ; syscall
+    mov rax, SYS_EXIT
+    mov rdi, EXIT_SUCCESS
+    syscall
