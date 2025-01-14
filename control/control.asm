@@ -26,6 +26,15 @@ _start:
     ;   for (i=1; i<=n; i++)
     ;       sum_of_squares += i^2
 
+    mov rbx, 1              ;   i
+    mov eax, dword [n]
+
+sumLoop:
+    mov rax, rbx                    ;   get i
+    mul rax                         ;   i^2
+    add qword[sum_of_squares], rax  ;   sum_of_squares += i^2
+    inc rbx
+    loop sumLoop
 
 
 last:
