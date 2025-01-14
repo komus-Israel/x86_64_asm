@@ -27,7 +27,7 @@ _start:
     ;       sum_of_squares += i^2
 
     mov rbx, 1              ;   i
-    mov eax, dword [n]
+    mov ecx, dword [n]
 
 sumLoop:
     mov rax, rbx                    ;   get i
