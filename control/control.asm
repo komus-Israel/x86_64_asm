@@ -26,6 +26,9 @@ _start:
     ;   for (i=1; i<=n; i++)
     ;       sum_of_squares += i^2
 
-    
+
 
 last:
+    mov rax, SYS_EXIT           ;   call code for exit
+    mov rdi, EXIT_SUCCESS       ;   exit with success
+    syscall
